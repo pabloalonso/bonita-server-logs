@@ -40,7 +40,7 @@ class ServerLogs implements RestApiController {
 					.toFile()
 					.listFiles(new FileFilter() {
 				boolean accept(File file) {
-					return file.getName().endsWith(".log")
+					return file.getName().matches(".*\\.log.*")
 				}
 			})
 					.collect()
